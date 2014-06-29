@@ -4,13 +4,31 @@
 
 <web-app>
 
+    <!-- Here we're defining list of application servlets -->
     <servlet>
         <servlet-name>hello_world</servlet-name>
         <servlet-class>com.example.HelloWorldServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>hello_jsp</servlet-name>
+        <servlet-class>com.example.JspServlet</servlet-class>
+    </servlet>
+
+    <!-- Here we're defining URL mapping to each previously defined servlets -->
     <servlet-mapping>
         <servlet-name>hello_world</servlet-name>
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>hello_world</servlet-name>
+        <url-pattern>/hello_world</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>hello_jsp</servlet-name>
+        <url-pattern>/hello_jsp</url-pattern>
+    </servlet-mapping>
+
 </web-app>
